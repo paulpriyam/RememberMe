@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLOR.background,
-        flexDirection:"column"
+        flexDirection: "column",
+        paddingHorizontal: SIZES.medium,
     },
     titleContainer: {
         width: "100%",
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
         
     },
     titleText: {
-        fontSize: SIZES.large,
+        fontSize: SIZES.xxLarge,
         color: COLOR.gray,
         
     },
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         
     },
     noteText: {
-        fontSize: SIZES.small,
+        fontSize: SIZES.large,
         color: COLOR.gray,
     },
     dateText: {

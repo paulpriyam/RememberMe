@@ -1,10 +1,12 @@
 import { View, TouchableOpacity, Image } from "react-native";
 import { Stack } from "expo-router";
-import { ICONS, SIZES, icons } from "../../constants";
-
+import { ICONS, SIZES } from "../../constants";
+import  { HeaderBtn, NoteDetailPage } from "../../components";
+import { useRouter } from "expo-router";
 const category = [];
 
 const NoteDetails = () => {
+    const router = useRouter();
     return (
         <View style={ 
             {
@@ -16,17 +18,13 @@ const NoteDetails = () => {
                 options={{
                     headerBackVisible: false,
                     headerLeft: () => {
-                        return (
-                            <TouchableOpacity onPress={() => {
-                                
-                            }}>
-                                <Image source={ICONS.left} />
-                                
-                            </TouchableOpacity>
-                        )
+                        return <HeaderBtn iconUrl={ICONS.left} onHandlePress={() => {
+                            router.back();
+                        } }/>
                     }
             }}/>
-
+            <NoteDetailPage />
+            
         </View>
     )
 }

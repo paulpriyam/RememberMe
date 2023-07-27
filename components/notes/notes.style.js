@@ -1,11 +1,17 @@
 import { StyleSheet } from "react-native";
-import { SIZES } from "../../constants";
+import { COLOR, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop:SIZES.medium
-    },
     noteContainer: {
-        
+        width: "40%",
+        height: 200,
+        borderRadius: SIZES.xSmall,
+        borderColor: COLOR.tertiary,
+       
+    },
+    noteText: {
+        fontSize: SIZES.small,
+        color: COLOR.white,
     }
 })
+export default styles;
